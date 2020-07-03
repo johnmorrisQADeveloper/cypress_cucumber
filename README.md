@@ -1,2 +1,1 @@
-# cypress_cucumber
-https://github.com/johnmorrisQADeveloper/cypress_cucumber/workflows/main.yml/badge.svg
+# Build Status Badge: ![](https://github.com/johnmorrisQADeveloper/cypress_cucumber/workflows/main.yml/badge.svg)
