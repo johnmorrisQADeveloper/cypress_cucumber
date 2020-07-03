@@ -6,6 +6,6 @@ Given('I open BBC News', () => {
   cy.visit('https://react-redux.realworld.io/')
 })
 
-Then('I see {string}" in the title', (title) => {
+Then('I see {string} in the title', (title) => {
   cy.title().should('eq',title)
 })
