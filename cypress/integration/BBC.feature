@@ -5,4 +5,4 @@ Feature: BBC New
   @focus
   Scenario: Opening a social network page
     Given I open BBC News
-    Then I see "Home - BBC News"" in the title
+    Then I see "Conduit" in the title

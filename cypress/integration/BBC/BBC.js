@@ -3,7 +3,7 @@
 import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
 
 Given('I open BBC News', () => {
-  cy.visit('https://www.bbc.co.uk/news')
+  cy.visit('https://react-redux.realworld.io/')
 })
 
 Then('I see {string}" in the title', (title) => {
