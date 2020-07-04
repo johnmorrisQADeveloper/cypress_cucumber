@@ -26,3 +26,4 @@ jobs:
       - uses: cypress-io/github-action@v2
         with:
           browser: edge
+          start-windows: npm run start:ci:windows
