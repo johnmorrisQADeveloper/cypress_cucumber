@@ -1,4 +1,4 @@
-class login {
+export default class login {
   navigate(){
     cy.visit('/#/login?_k=stnllq')
   }
@@ -25,5 +25,3 @@ class login {
     return cy.contains(content, { timeout: 2000 })
   }
 }
-
-export default login
