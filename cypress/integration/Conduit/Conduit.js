@@ -1,11 +1,12 @@
 /// <reference types="Cypress" />
 
 import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
-
+import Conduit from '../pageObject/Conduit';
+const conduit = new Conduit()
 Given('I open BBC News', () => {
-  cy.visit('https://react-redux.realworld.io/')
+  conduit.navigate()
 })
 
 Then('I see {string} in the title', (title) => {
-  cy.title().should('eq',title)
+  conduit.title().should('eq',title)
 })

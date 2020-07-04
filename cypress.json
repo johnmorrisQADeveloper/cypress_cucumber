@@ -1,4 +1,4 @@
 {
   "testFiles": "**/*.feature",
-  "baseUrl": "https://www.bbc.co.uk/news"
+  "baseUrl": "https://react-redux.realworld.io/"
 }
