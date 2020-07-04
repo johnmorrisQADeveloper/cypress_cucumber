@@ -3,7 +3,7 @@
 import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
 import Conduit from '../pageObject/Conduit';
 const conduit = new Conduit()
-Given('I open BBC News', () => {
+Given('I open Conduit', () => {
   conduit.navigate()
 })
 

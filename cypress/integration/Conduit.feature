@@ -1,8 +1,8 @@
-Feature: BBC New
+Feature: Conduit
 
-  I want to check BBC News
+  I want to check Conduit
   
   @focus
   Scenario: Opening a social network page
-    Given I open BBC News
+    Given I open Conduit
     Then I see "Conduit" in the title
