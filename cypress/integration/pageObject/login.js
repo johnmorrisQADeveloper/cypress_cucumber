@@ -1,4 +1,4 @@
-export default class login {
+export default class Login {
   navigate(){
     cy.visit('/#/login?_k=stnllq')
   }
