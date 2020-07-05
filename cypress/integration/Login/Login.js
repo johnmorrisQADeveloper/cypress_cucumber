@@ -1,5 +1,5 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
-import Login from '../pageObject/Login';
+import Login from '../pageObject/login';
 const login = new Login()
 
 Given('I open open conduit login page', () => {
