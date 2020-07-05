@@ -6,3 +6,5 @@
 [![ubuntuChrome status](https://github.com/johnmorrisQADeveloper/cypress_cucumber/workflows/ubuntuChrome/badge.svg?branch=master)](.github/workflows/ubuntuChrome.yml)
 
 [![macChrome status](https://github.com/johnmorrisQADeveloper/cypress_cucumber/workflows/macChrome/badge.svg?branch=master)](.github/workflows/macChrome.yml)
+
+[![ubuntuFirefox status](https://github.com/johnmorrisQADeveloper/cypress_cucumber/workflows/ubuntuFirefox/badge.svg?branch=master)](.github/workflows/ubuntuFirefox.yml)

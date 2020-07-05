@@ -1,0 +1,27 @@
+name: ubuntuFireFox
+on: push
+jobs:
+  firefox:
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node12.16.1-chrome80-ff73
+      options: --user 1001
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - run: id
+      - run: ls -la ~
+
+      - name: Firefox
+        uses: ./
+        timeout-minutes: 3
+        with:
+          working-directory: examples/firefox
+          browser: firefox
+      - uses: actions/upload-artifact@v1
+        with:
+          name: screenshots-in-firefox
+          path: examples/firefox/cypress/screenshots
+
+      - run: npx image-size cypress/screenshots/**/*.png
+        working-directory: examples/firefox
