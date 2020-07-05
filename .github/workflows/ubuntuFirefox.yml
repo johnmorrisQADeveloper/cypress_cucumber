@@ -1,4 +1,4 @@
-name: ubuntuFireFox
+name: ubuntuFirefox
 on: push
 jobs:
   firefox:
