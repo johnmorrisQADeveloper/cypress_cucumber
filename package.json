@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "npx eslint cypress/integration/*/*.js --fix",
+    "pretest": "npm run lint",
     "test": "npx cypress run",
     "open": "npx cypress open"
-
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:cypress/recommended"
+    ]
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
@@ -25,6 +31,13 @@
   "dependencies": {},
   "devDependencies": {
     "cypress": "^4.9.0",
-    "cypress-cucumber-preprocessor": "^2.5.2"
+    "cypress-cucumber-preprocessor": "^2.5.2",
+    "eslint": "^7.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
   }
 }

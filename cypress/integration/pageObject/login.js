@@ -1,27 +1,33 @@
 export default class login {
-  navigate(){
+  navigate () {
     cy.visit('/#/login?_k=stnllq')
   }
+
   title () {
     return cy.title()
   }
-  email(){
+
+  email () {
     return cy.get('input[type="email"]')
   }
-  password(){
+
+  password () {
     return cy.get('input[type="password"]')
   }
-  signInButton(){
+
+  signInButton () {
     return cy.get('.btn').contains('Sign in')
   }
-  login(dataTable) {
+
+  login (dataTable) {
     dataTable.hashes().forEach(element => {
       this.email().type(element.username)
       this.password().type(element.password)
       this.signInButton().click()
     })
   }
-  checkContent(content) {
+
+  checkContent (content) {
     return cy.contains(content, { timeout: 2000 })
   }
 }

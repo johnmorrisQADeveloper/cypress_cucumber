@@ -1,10 +1,11 @@
 /// <reference types="Cypress" />
 
 class Conduit {
-  navigate(){
+  navigate () {
     cy.visit('/')
   }
-  title(){
+
+  title () {
     return cy.title()
   }
 }
