@@ -8,3 +8,5 @@
 [![macChrome status](https://github.com/johnmorrisQADeveloper/cypress_cucumber/workflows/macChrome/badge.svg?branch=master)](.github/workflows/macChrome.yml)
 
 [![ubuntuFirefox status](https://github.com/johnmorrisQADeveloper/cypress_cucumber/workflows/ubuntuFirefox/badge.svg?branch=master)](.github/workflows/ubuntuFirefox.yml)
+
+[![macEdge status](https://github.com/johnmorrisQADeveloper/cypress_cucumber/workflows/macEdge/badge.svg?branch=master)](.github/workflows/macEdge.yml)
