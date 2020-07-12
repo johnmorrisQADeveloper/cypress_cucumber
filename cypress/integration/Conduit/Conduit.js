@@ -1,12 +1,13 @@
 /// <reference types="Cypress" />
 
 import { Given, Then } from 'cypress-cucumber-preprocessor/steps'
-import Conduit from '../pageObject/Conduit'
-const conduit = new Conduit()
+
 Given('I open Conduit', () => {
-  conduit.navigate()
+  cy.visit('/')
 })
 
 Then('I see {string} in the title', (title) => {
-  conduit.title().should('eq', title)
+  cy.title().should('be', 'Conduit')
+  cy.visit('/#/login?_k=06oljf')
+  cy.login()
 })

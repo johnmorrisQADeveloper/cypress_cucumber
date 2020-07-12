@@ -28,7 +28,10 @@
     "url": "https://github.com/johnmorrisQADeveloper/cypress_cucumber/issues"
   },
   "homepage": "https://github.com/johnmorrisQADeveloper/cypress_cucumber#readme",
-  "dependencies": {},
+  "dependencies": {
+    "cypress-image-snapshot": "^3.1.1",
+    "cypress-visual-regression": "^1.4.0"
+  },
   "devDependencies": {
     "cypress": "^4.9.0",
     "cypress-cucumber-preprocessor": "^2.5.2",
