@@ -9,3 +9,16 @@
 npm i
 npm t
 ```
+
+## update base images
+```
+npx cypress run --env updateSnapshots=true --spec "cypress\integration\visual-tests.spec.js"
+
+npx cypress run --env updateSnapshots=true --browser chrome 
+```
+
+
+## run
+```
+npx cypress run --browser chrome
+```
