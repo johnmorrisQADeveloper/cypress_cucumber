@@ -19,6 +19,7 @@
         "cypress/no-async-tests": "error"
     },
     "plugins": [
-        "cypress"
+        "cypress",
+        "cucumber"
     ]
 }

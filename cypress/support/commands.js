@@ -1,4 +1,4 @@
-import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command'
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -26,11 +26,7 @@ import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-
-Cypress.Commands.add("login", () => {
-  // cy.get('input[type="email"]').type('johnjohn@john.com')
-  // cy.get('input[type="password"]').type('johnjohn')
-  // cy.get('button').contains('Sign in').click()
+Cypress.Commands.add('login', () => {
   cy.fixture('example').as('example')
   cy.get('@example').then(res => {
     cy.get('input[type="email"]').type(res.email)
@@ -44,13 +40,13 @@ addMatchImageSnapshotCommand({
   failureThreshold: 0.00,
   failureThresholdType: 'percent',
   customDiffConfig: { threshold: 0.0 },
-  capture: 'viewport',
+  capture: 'viewport'
 })
 
-Cypress.Commands.add("setResolution", (size) => {
+Cypress.Commands.add('setResolution', (size) => {
   if (Cypress._.isArray(size)) {
-     cy.viewport(size[0], size[1]);
-   } else {
-    cy.viewport(size);
+    cy.viewport(size[0], size[1])
+  } else {
+    cy.viewport(size)
   }
- })
+})

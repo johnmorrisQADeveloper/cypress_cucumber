@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint cypress/integration/*/*.js --fix",
+    "lint": "npx eslint cypress/integration/*/*.js cypress/integration/*.feature cypress/*/*.js --fix",
     "pretest": "npm run lint",
     "test": "npx cypress run --browser chrome",
     "open": "npx cypress open"
@@ -38,6 +38,7 @@
     "cypress-slack-reporter": "^0.10.0",
     "eslint": "^7.4.0",
     "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-cucumber": "^1.4.0",
     "eslint-plugin-cypress": "^2.11.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
