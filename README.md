@@ -29,5 +29,6 @@ docker-compose up -d --build
 docker images
 docker run -it --entrypoint /bin/sh imageID
 sudo docker cp containerID:/app/cypress/snapshots/Conduit.feature images
+
 ```
 
