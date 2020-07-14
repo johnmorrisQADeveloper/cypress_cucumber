@@ -22,3 +22,12 @@ npx cypress run --env updateSnapshots=true --browser chrome
 ```
 npx cypress run --browser chrome
 ```
+
+## run a docker image
+```
+docker-compose up -d --build
+docker images
+docker run -it --entrypoint /bin/sh imageID
+sudo docker cp containerID:/app/cypress/snapshots/Conduit.feature images
+```
+
