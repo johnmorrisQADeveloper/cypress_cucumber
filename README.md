@@ -31,7 +31,7 @@ npx cypress run --env updateSnapshots=true --browser chrome
 npx cypress run --browser chrome
 ```
 
-### Update images, keep local and remote in sync
+## Update images, keep local and remote in sync
 #### 1. Build docker image
 ```
 docker-compose up -d --build
