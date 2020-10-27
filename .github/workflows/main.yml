@@ -12,6 +12,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - name: Install dependecies
+        run: npm install
       - name: Danger
         run: npx danger ci
         env:
