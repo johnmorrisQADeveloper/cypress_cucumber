@@ -1,11 +1,34 @@
 name: main
-on: [push]
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
-  dangerjs-run:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        name: Checking out repository
+
+      - name: Install dependecies and run tests
+        run: |
+          npm install 
+          npm ci
+          npm run build --if-present
+        env:
+          CI: true     
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: npm install
+        run: npm install 
+      - name: install dangerjs
+        run: npm install -g danger
       - name: Danger
-    uses: danger/danger-js@9.1.6
-    env:
-    DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+        run: npx danger ci
+        env:
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
