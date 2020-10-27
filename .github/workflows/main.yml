@@ -1,14 +1,13 @@
-name: main
-on: [push]
+name: "Danger JS"
+on: [pull_request, push]
+
 jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        name: Checking out repository
-      - name: npm install
-        run: npm install 
-      - name: Danger
-        run: npx danger ci
-        env:
-          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+build:
+name: Danger JS
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v1
+- name: Danger
+uses: danger/danger-js@9.1.6
+env:
+DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
