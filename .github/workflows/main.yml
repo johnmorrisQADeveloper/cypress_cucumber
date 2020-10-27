@@ -13,7 +13,7 @@ jobs:
       - name: install dangerjs
         run: npm install -g danger
       - name: print present directory
-        run: pwd
+        run: ls
       - name: Danger
         run: npx danger ci
         env:
