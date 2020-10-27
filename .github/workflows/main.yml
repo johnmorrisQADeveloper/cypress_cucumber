@@ -1,33 +1,19 @@
 name: main
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+on: [push]
 jobs:
-  build:
+  cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        name: Checking out repository
-
-      - name: Install dependecies and run tests
-        run: |
-          npm install 
-          npm ci
-          npm run build --if-present
-        env:
-          CI: true     
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: npm install
+      - name: yarn install
         run: npm install 
-      - name: install dangerjs
-        run: npm install -g danger
       - name: Danger
         run: npx danger ci
         env:
