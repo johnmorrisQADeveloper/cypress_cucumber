@@ -1,4 +1,4 @@
-import { warn, message, danger } from 'danger'
+const { warn, message, danger } = require('danger')
 
 // No PR is too small to include a description of why you made a change
 if (danger.github.pr.body.length < 10) {
