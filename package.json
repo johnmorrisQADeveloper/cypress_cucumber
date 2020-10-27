@@ -28,21 +28,19 @@
     "url": "https://github.com/johnmorrisQADeveloper/cypress_cucumber/issues"
   },
   "homepage": "https://github.com/johnmorrisQADeveloper/cypress_cucumber#readme",
-  "dependencies": {
-    "cypress": "^4.9.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "cypress": "^4.9.0",
-    "cypress-cucumber-preprocessor": "^2.5.2",
+    "cypress": "^4.12.1",
+    "cypress-cucumber-preprocessor": "^2.5.5",
     "cypress-image-snapshot": "^3.1.1",
     "cypress-slack-reporter": "^0.10.0",
-    "eslint": "^7.4.0",
+    "eslint": "^7.12.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-cucumber": "^1.4.0",
-    "eslint-plugin-cypress": "^2.11.1",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.2"
   }
 }
