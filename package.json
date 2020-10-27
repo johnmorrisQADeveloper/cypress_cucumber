@@ -28,7 +28,9 @@
     "url": "https://github.com/johnmorrisQADeveloper/cypress_cucumber/issues"
   },
   "homepage": "https://github.com/johnmorrisQADeveloper/cypress_cucumber#readme",
-  "dependencies": {},
+  "dependencies": {
+    "danger": "^10.5.0"
+  },
   "devDependencies": {
     "cypress": "^4.12.1",
     "cypress-cucumber-preprocessor": "^2.5.5",
