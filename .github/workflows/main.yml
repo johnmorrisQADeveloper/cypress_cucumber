@@ -1,13 +1,11 @@
-name: "Danger JS"
-on: [pull_request, push]
-
+name: "main"
+on: [push]
 jobs:
-build:
-name: Danger JS
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v1
-- name: Danger
-uses: danger/danger-js@9.1.6
-env:
-DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+  dangerjs-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Danger
+      uses: danger/danger-js@9.1.6
+      env:
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
