@@ -8,8 +8,6 @@ jobs:
         name: Checking out repository
       - name: npm install
         run: npm install 
-      - name: install dangerjs
-        run: npm install -g danger
       - name: Danger
         run: npx danger ci
         env:
