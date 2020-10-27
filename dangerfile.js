@@ -1,9 +1,4 @@
-import { fail, warn, message, markdown, danger } from 'danger'
-
-fail('This is a failure message')
-warn('This is a warning')
-message('This is a normal message')
-markdown('*Markdown* is also **supported**')
+import { warn, message, danger } from 'danger'
 
 // No PR is too small to include a description of why you made a change
 if (danger.github.pr.body.length < 10) {
