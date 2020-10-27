@@ -4,6 +4,18 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        name: Checking out repository
+
+      # Runs a set of commands using the runners shell
+      - name: Install dependecies and run tests
+        run: |
+          npm install 
+          npm ci
+          npm run build --if-present
+          npm test
+        env:
+          CI: true     
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -12,19 +24,7 @@ jobs:
         run: npm install 
       - name: install dangerjs
         run: npm install -g danger
-      - name: print present directory
-        run: ls
       - name: Danger
         run: npx danger ci
         env:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
-
-#       - name: Slack Notification
-#         uses: martinusso/action-slack-notify@v1.2.0
-#         env:
-#           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-#           SLACK_COLOR: '#3278BD'
-#           SLACK_ICON: https://github.com/rtCamp.png?size=48
-#           SLACK_MESSAGE: 'Post Content :rocket:'
-#           SLACK_TITLE: Post Title
-#           SLACK_USERNAME: rtCamp
