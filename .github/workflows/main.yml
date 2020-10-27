@@ -12,8 +12,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Install dependecies
-        run: yarn install
+      - name: Install yarn
+        run: npm install -g yarn
+      - name: yarn install
+        run: yarn install --frozen-lockfile
       - name: Danger
         run: yarn danger ci
         env:
