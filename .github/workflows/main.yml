@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - name: Install dependecies
+        run: npm install
       - name: Danger
         run: npx danger ci
         env:
