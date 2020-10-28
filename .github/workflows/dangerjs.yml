@@ -1,7 +1,7 @@
-name: main
+name: dangerjs
 on: [push]
 jobs:
-  main:
+  dangerjs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
