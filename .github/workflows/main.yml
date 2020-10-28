@@ -4,7 +4,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
+      - uses: actions/checkout@master
+      - name: Danger JS
+        uses: danger/danger-js@master
+        env:
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+        with:
+          args: --dangerfile .ci/danger/dangerfile.js        
