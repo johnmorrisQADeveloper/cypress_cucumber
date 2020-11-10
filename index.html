@@ -1,12 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Tabbing test 01</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-slim-tabs@0.3.0/themes/default.css">
 </head>
+
 <body>
-  <h1>Hello John</h1>
-  <p>Hello again</p>
+  <div id="app">
+    <template>
+          <tabs>
+            <tab title="Vue">
+              This is Vue
+            </tab>
+            <tab title="React">
+              This is React
+            </tab>
+            <tab title="Svelte">
+              This is Svelte
+            </tab>
+          </tabs>
+        </template>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-slim-tabs@0.3.0/dist/vue-slim-tabs.js"></script>
+  <script>
+    Vue.use(vueSlimTabs);
+    const app = new Vue({
+      el: '#app',
+      data() {
+        return {}
+      },
+    });
+  </script>
+
 </body>
+
 </html>
